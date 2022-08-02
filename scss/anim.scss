@@ -1,0 +1,352 @@
+// rs-slider
+.rs-slider__slide {
+	.large-title {
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			top: 0px;
+			bottom: 0px;
+			height: 100%;
+			width: 0%;
+			background-color: #fbd84f;
+		}
+
+		span {
+			opacity: 0;
+		}
+	}
+
+	ul {
+		li {
+			position: relative;
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				bottom: 0px;
+				height: 100%;
+				width: 0%;
+				background-color: #fbd84f;
+			}
+
+			span {
+				opacity: 0;
+			}
+		}
+	}
+
+	.rs-btn {
+		opacity: 0;
+	}
+}
+
+.rs-slider__slide.swiper-slide-active {
+	opacity: 1 !important;
+
+	.large-title {
+		span {
+			animation: fadeIn 0.5s 1s ease-in-out forwards;
+		}
+
+		&::after {
+			animation: openBoxWid 1s 0.5s ease-in-out forwards;
+		}
+	}
+
+	ul {
+		li {
+			&::after {
+				animation: openBoxWid 1s 0.5s ease-in-out forwards;
+			}
+			span {
+				animation: fadeIn 0.5s 0.5s ease-in-out forwards;
+			}
+
+			$i: 1;
+			@while $i < 15 {
+				&:nth-child(#{$i}) {
+					&::after {
+						animation-delay: $i / 20 + s;
+					}
+				}
+				$i: $i + 1;
+			}
+		}
+	}
+
+	.rs-btn {
+		animation: fadeIn 0.5s 1s ease-in-out forwards;
+	}
+}
+
+// rs-services
+.rs-services__slide {
+	$i: 1;
+	@while $i < 15 {
+		&:nth-child(#{$i}) {
+			.services-item {
+				&__img {
+					&_bg {
+						&::after {
+							animation-delay: $i / 20 + s;
+						}
+					}
+				}
+			}
+		}
+		$i: $i + 1;
+	}
+
+	.services-item {
+		&__img {
+			&_bg.aos-animate {
+				&::after {
+					animation: iconHeight 1s 0.5s ease-in-out forwards;
+				}
+			}
+		}
+	}
+}
+
+// rs-text-block-1
+.rs-text-block-1 {
+	.rs-text-block__description {
+		position: relative;
+
+		[data-aos="reveal-left"] {
+			background-color: #f6f6f6;
+		}
+	}
+
+	.rs-text-block__picture {
+		position: relative;
+
+		[data-aos="reveal-left"] {
+			background-color: #fbd84f;
+
+			&.aos-animate {
+				animation: openBoxWid 1s 0.7s ease-in-out forwards;
+			}
+		}
+	}
+}
+
+// rs-text-block-2
+.rs-text-block-2 {
+	.rs-text-block__description {
+		position: relative;
+
+		[data-aos="reveal-left"] {
+			background-color: #f6f6f6;
+		}
+	}
+
+	.rs-text-block__picture {
+		position: relative;
+
+		[data-aos="reveal-left"] {
+			background-color: #fbd84f;
+
+			&.aos-animate {
+				animation: openBoxWid 1s 0.7s ease-in-out forwards;
+			}
+		}
+	}
+
+	.rs-text-block__note {
+		[data-aos="reveal-left"] {
+			background-color: #fbd84f;
+
+			&.aos-animate {
+				animation: openBoxWid 1s 1s ease-in-out forwards;
+			}
+		}
+	}
+}
+
+// rs-stages
+.rs-stages__item {
+	$i: 1;
+	@while $i < 15 {
+		&:nth-child(#{$i}) {
+			.stages-item__head_img_bg {
+				&::after {
+					animation-delay: $i / 20 + s;
+				}
+			}
+		}
+		$i: $i + 1;
+	}
+
+	.stages-item__head_img_bg {
+		&.aos-animate {
+			&::after {
+				animation: iconHeight 1s ease-in-out forwards;
+			}
+		}
+	}
+}
+
+// rs-about
+.rs-about {
+	.rs-about__description {
+		position: relative;
+
+		[data-aos="reveal-left"] {
+			background-color: #fbd84f;
+		}
+	}
+
+	.rs-about__picture {
+		position: relative;
+
+		[data-aos="reveal-left"] {
+			background-color: #f6f6f6;
+
+			&.aos-animate {
+				animation: openBoxWid 1s 0.7s ease-in-out forwards;
+			}
+		}
+	}
+
+	.rs-about__note {
+		[data-aos="reveal-left"] {
+			background-color: #fbd84f;
+
+			&.aos-animate {
+				animation: openBoxWid 1s 1s ease-in-out forwards;
+			}
+		}
+	}
+}
+
+// rs-features
+.rs-features__item {
+	$i: 1;
+	@while $i < 15 {
+		&:nth-child(#{$i}) {
+			.rs-features__img_bg {
+				&::after {
+					animation-delay: $i / 20 + s;
+				}
+			}
+		}
+		$i: $i + 1;
+	}
+
+	.rs-features__img_bg {
+		&.aos-animate {
+			&::after {
+				animation: iconHeight 1s ease-in-out forwards;
+			}
+		}
+	}
+}
+
+// rs-stages
+.rs-faq__title {
+	.rs-faq__title_img_bg {
+		&.aos-animate {
+			&::after {
+				animation: iconHeight 1s ease-in-out forwards;
+			}
+		}
+	}
+}
+
+// common
+.section-title {
+	&.aos-animate {
+		span {
+			@media (min-width: 1141px) {
+				&::before {
+					animation: iconHeight 1s 0.5s ease-in-out forwards;
+				}
+			}
+		}
+	}
+}
+
+//========================================================================================================================================================
+.reveal-block {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	height: 100%;
+	width: 0%;
+	z-index: 100;
+}
+
+[data-aos="reveal-left"] {
+	&.aos-animate {
+		animation: openBoxWid 1s 0.5s ease-in-out forwards;
+	}
+}
+
+[data-aos="reveal-fadeIn"] {
+	opacity: 0;
+
+	&.aos-animate {
+		animation: fadeIn 0.5s 1s ease-in-out forwards;
+	}
+}
+
+//========================================================================================================================================================
+@keyframes openBoxWid {
+	0% {
+		width: 0%;
+		left: 0px;
+		right: auto;
+	}
+	50% {
+		width: 100%;
+	}
+	100% {
+		width: 0%;
+		right: 0px;
+		left: auto;
+	}
+}
+
+@keyframes iconHeight {
+	0% {
+		height: 100%;
+		top: 0;
+		bottom: auto;
+	}
+	50% {
+		height: 0%;
+	}
+	100% {
+		height: 100%;
+		bottom: 0;
+		top: auto;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, -10%, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}

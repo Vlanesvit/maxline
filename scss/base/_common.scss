@@ -1,0 +1,486 @@
+// Text
+.large-title {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 63px;
+	line-height: 69px;
+
+	@media (max-width: 1140px) {
+		font-size: calc(35px + (63 - 35) * ((100vw - 320px) / (1140 - 320)));
+		line-height: calc(41px + (69 - 41) * ((100vw - 320px) / (1140 - 320)));
+	}
+
+	&--small {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 50px;
+		line-height: 60px;
+
+		@media (max-width: 1140px) {
+			font-size: calc(30px + (50 - 30) * ((100vw - 320px) / (1140 - 320)));
+			line-height: calc(40px + (60 - 40) * ((100vw - 320px) / (1140 - 320)));
+		}
+
+		span {
+			color: #fbd84f;
+		}
+	}
+
+	&--large {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 68px;
+		line-height: 72px;
+
+		@media (max-width: 1140px) {
+			font-size: calc(40px + (68 - 40) * ((100vw - 320px) / (1140 - 320)));
+			line-height: calc(44px + (60 - 44) * ((100vw - 320px) / (1140 - 320)));
+		}
+	}
+}
+
+.large-text {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 28px;
+	font-feature-settings: "pnum" on, "lnum" on;
+	color: #e1e1e3;
+
+	@media (max-width: 1140px) {
+		font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1140 - 320)));
+		line-height: calc(24px + (28 - 24) * ((100vw - 320px) / (1140 - 320)));
+	}
+}
+
+.section-title {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 38px;
+
+	@media (max-width: 1140px) {
+		font-size: calc(25px + (32 - 25) * ((100vw - 320px) / (1140 - 320)));
+		line-height: calc(31px + (38 - 31) * ((100vw - 320px) / (1140 - 320)));
+	}
+
+	&--large {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 40px;
+
+		@media (max-width: 1140px) {
+			font-size: calc(28px + (40 - 28) * ((100vw - 320px) / (1140 - 320)));
+			line-height: calc(28px + (40 - 28) * ((100vw - 320px) / (1140 - 320)));
+		}
+	}
+
+	span {
+		z-index: 1;
+		position: relative;
+
+		@media (min-width: 1141px) {
+			white-space: nowrap;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: -4px;
+				right: -4px;
+				top: 0px;
+				display: block;
+				background-color: #fbd84f;
+				z-index: -1;
+				height: 100%;
+				width: calc(100% + 8px);
+			}
+		}
+
+		@media (max-width: 1140px) {
+			background-color: #fbd84f;
+		}
+	}
+}
+
+.medium-title {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 26px;
+
+	&--large {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 31px;
+	}
+}
+
+.small-title {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 22px;
+
+	&--small {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 26px;
+		font-feature-settings: "pnum" on, "lnum" on;
+	}
+}
+
+.section-text {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	font-feature-settings: "pnum" on, "lnum" on;
+	color: #808185;
+
+	@media (max-width: 1140px) {
+		font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1140 - 320)));
+		line-height: calc(22px + (24 - 22) * ((100vw - 320px) / (1140 - 320)));
+	}
+
+	&--large {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 27px;
+		font-feature-settings: "pnum" on, "lnum" on;
+		color: #808185;
+
+		@media (max-width: 1140px) {
+			font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1140 - 320)));
+			line-height: calc(25px + (27 - 25) * ((100vw - 320px) / (1140 - 320)));
+		}
+	}
+
+	&--small {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 21px;
+		font-feature-settings: "pnum" on, "lnum" on;
+		color: #808185;
+	}
+}
+
+// Default-btn
+.rs-btn {
+	padding: 16px 24px;
+	background: #fbd84f;
+	border-radius: 2px;
+	position: relative;
+	transition: all 0.3s ease 0s;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+	color: #2b2d33;
+	pointer-events: auto;
+	margin: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	overflow: hidden;
+	z-index: 1;
+
+	&::before,
+	&::after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	span {
+		display: block;
+		position: relative;
+		z-index: 10;
+	}
+
+	&::before {
+		content: "";
+		background: #ffa800;
+		width: 120%;
+		height: 0;
+		padding-bottom: 120%;
+		top: -110%;
+		left: -10%;
+		border-radius: 50%;
+		transform: translate3d(0, 68%, 0) scale3d(0, 0, 0);
+	}
+
+	&::after {
+		content: "";
+		background: #ffa800;
+		transform: translate3d(0, -100%, 0);
+		transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			span {
+				animation: MoveScaleUpInitial 0.3s forwards, MoveScaleUpEnd 0.3s forwards 0.3s;
+			}
+
+			&::before {
+				transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+				transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+			}
+
+			&::after {
+				transform: translate3d(0, 0, 0);
+				transition-duration: 0.05s;
+				transition-delay: 0.4s;
+				transition-timing-function: linear;
+			}
+		}
+	}
+}
+
+@keyframes MoveScaleUpInitial {
+	to {
+		transform: translate3d(0, -105%, 0) scale3d(1, 2, 1);
+		opacity: 0;
+	}
+}
+
+@keyframes MoveScaleUpEnd {
+	from {
+		transform: translate3d(0, 100%, 0) scale3d(1, 2, 1);
+		opacity: 0;
+	}
+	to {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+}
+
+// Arrow-btn
+$text-arrow-space: 20px;
+$shaft-width: 16px;
+$shaft-thickness: 2px;
+$arrow-head-width: 10px;
+$arrow-head-thickness: $shaft-thickness;
+
+.the-arrow {
+	width: $shaft-width;
+	transition: all 0.2s;
+
+	&.-left {
+		position: absolute;
+		top: 50%;
+		left: 20px;
+
+		> .shaft {
+			width: 0;
+			background-color: #2b2d33;
+
+			&:before,
+			&:after {
+				width: 0;
+				background-color: #2b2d33;
+			}
+
+			&:before {
+				transform: rotate(0);
+			}
+
+			&:after {
+				transform: rotate(0);
+			}
+		}
+	}
+
+	&.-right {
+		top: 0px;
+
+		> .shaft {
+			width: $shaft-width;
+			transition-delay: 0.2s;
+
+			&:before,
+			&:after {
+				width: $arrow-head-width;
+				transition-delay: 0.3s;
+				transition: all 0.5s;
+			}
+
+			&:before {
+				transform: rotate(45deg);
+			}
+
+			&:after {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+
+	> .shaft {
+		background-color: #2b2d33;
+		display: block;
+		height: $shaft-thickness;
+		position: relative;
+		transition: all 0.2s;
+		transition-delay: 0;
+		will-change: transform;
+
+		&:before,
+		&:after {
+			background-color: #2b2d33;
+			content: "";
+			display: block;
+			height: $arrow-head-thickness;
+			position: absolute;
+			top: 0;
+			right: 0;
+			transition: all 0.2s;
+			transition-delay: 0;
+		}
+
+		&:before {
+			transform-origin: top right;
+		}
+
+		&:after {
+			transform-origin: bottom right;
+		}
+	}
+}
+
+.rs-btn-arrow {
+	padding: 18px 25px 19px 25px;
+	background: #fbd84f;
+	border-radius: 2px;
+	position: relative;
+	transition: all 0.3s ease 0s;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+	color: #2b2d33;
+	pointer-events: auto;
+	margin: 0;
+	display: inline-flex;
+	align-items: center;
+	overflow: hidden;
+
+	&:hover {
+		color: #2b2d33;
+
+		> .the-arrow.-left {
+			> .shaft {
+				width: $shaft-width;
+				transition-delay: 0.1s;
+				background-color: #2b2d33;
+
+				&:before,
+				&:after {
+					width: $arrow-head-width;
+					transition-delay: 0.1s;
+					background-color: #2b2d33;
+				}
+
+				&:before {
+					transform: rotate(40deg);
+				}
+
+				&:after {
+					transform: rotate(-40deg);
+				}
+			}
+		}
+
+		> .main {
+			transform: translateX($shaft-width + $text-arrow-space);
+
+			> .the-arrow.-right {
+				> .shaft {
+					width: 0;
+					transform: translateX(200%);
+					transition-delay: 0;
+
+					&:before,
+					&:after {
+						width: 0;
+						transition-delay: 0;
+						transition: all 0.1s;
+					}
+
+					&:before {
+						transform: rotate(0);
+					}
+
+					&:after {
+						transform: rotate(0);
+					}
+				}
+			}
+		}
+	}
+
+	> .main {
+		display: flex;
+		align-items: center;
+		transition: all 0.2s;
+
+		> .text {
+			margin: 0 $text-arrow-space 0 0;
+			line-height: 1;
+		}
+
+		> .the-arrow {
+			position: relative;
+		}
+	}
+}
+
+.rs-input {
+	width: 100%;
+	height: 48px;
+	background-color: #f4f4f4;
+	border-radius: 2px;
+	color: inherit;
+	padding: 11px 12px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 26px;
+	transition: all 0.3s ease 0s;
+
+	&::placeholder {
+		color: #a8a9ac;
+		transition: all 0.3s ease 0s;
+	}
+
+	&:focus {
+		&::placeholder {
+			opacity: 0;
+		}
+	}
+
+	// .input__title
+	&__title {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+		font-feature-settings: "pnum" on, "lnum" on;
+		display: block;
+		margin-bottom: 4px;
+	}
+}
+
+textarea {
+	height: 100%;
+	min-height: 137px;
+	max-height: 137px;
+	resize: none;
+}

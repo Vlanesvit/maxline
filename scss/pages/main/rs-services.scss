@@ -1,0 +1,138 @@
+.rs-services {
+	position: relative;
+
+	// .rs-services__slide
+	&__slide {
+		height: 300px;
+		transition: all 0.3s ease 0s;
+
+		@media (min-width: 1451px) {
+			flex: 1 0 20%;
+
+			@media (any-hover: hover) {
+				&:hover {
+					flex: 1 0 23%;
+				}
+			}
+		}
+
+		@media (max-width: 1450px) and (min-width: 1141px) {
+			flex: 1 0 25%;
+
+			@media (any-hover: hover) {
+				@media (any-hover: hover) {
+					&:hover {
+						flex: 1 0 28%;
+					}
+				}
+			}
+		}
+
+		@media (max-width: 1140px) and (min-width: 992px) {
+			flex: 1 0 33.3333%;
+
+			@media (any-hover: hover) {
+				@media (any-hover: hover) {
+					&:hover {
+						flex: 1 0 35%;
+					}
+				}
+			}
+		}
+
+		&:nth-child(2n) {
+			.services-item {
+				background-color: #fbd84f;
+			}
+
+			.services-item__img {
+				&_bg::after {
+					background: #fff;
+				}
+			}
+		}
+	}
+
+	//========================================================================================================================================================
+	.services-item {
+		height: 100%;
+		background-color: #ffffff;
+
+		a {
+			padding: 32px 24px;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			@media (max-width: 1140px) {
+				padding: calc(25px + (32 - 25) * ((100vw - 320px) / (1140 - 320)))
+					calc(15px + (24 - 15) * ((100vw - 320px) / (1140 - 320)));
+			}
+		}
+
+		// .services-item__img
+		&__img {
+			display: inline-block;
+			position: relative;
+			margin-bottom: 24px;
+
+			&_bg {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				height: 26px;
+				width: 100%;
+				z-index: 0;
+
+				&::after {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 0;
+					height: 100%;
+					width: 100%;
+					background: #fbd84f;
+				}
+			}
+
+			img {
+				z-index: 1;
+				position: relative;
+			}
+		}
+		// .services-item__body
+		&__body {
+			h3 {
+				margin-bottom: 8px;
+				max-width: 335px;
+			}
+		}
+
+		// .services-item__time
+		&__time {
+			display: flex;
+			align-items: center;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 27px;
+			font-feature-settings: "pnum" on, "lnum" on;
+
+			@media (max-width: 1140px) {
+				font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1140 - 320)));
+				line-height: calc(25px + (27 - 25) * ((100vw - 320px) / (1140 - 320)));
+			}
+
+			i {
+				margin-right: 12px;
+				display: flex;
+				align-items: center;
+
+				&::before {
+					font-size: 23px;
+				}
+			}
+		}
+	}
+}
