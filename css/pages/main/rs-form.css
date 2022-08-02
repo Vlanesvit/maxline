@@ -1,0 +1,109 @@
+.rs-form {
+  position: relative;
+  margin: 80px 0px;
+}
+
+.rs-form__wrapper {
+  padding: 60px 148px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 1140px) {
+  .rs-form__wrapper {
+    padding: calc(20px + (60 - 20) * ((100vw - 320px) / (1140 - 320))) calc(15px + (148 - 15) * ((100vw - 320px) / (1140 - 320)));
+  }
+}
+
+.rs-form__wrapper h2 {
+  text-align: center;
+}
+
+.rs-form .request {
+  margin-top: 40px;
+}
+
+.rs-form .request__fields {
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: repeat(1, 1fr);
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 16px;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 769px) {
+  .rs-form .request__fields {
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.rs-form .request__field {
+  width: 100%;
+  height: 100%;
+}
+
+.rs-form .request__footer {
+  margin-top: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 992px) {
+  .rs-form .request__footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+}
+
+.rs-form .request__footer .rs-btn {
+  margin-left: 20px;
+  padding: 16px 32px;
+}
+
+@media (max-width: 992px) {
+  .rs-form .request__footer .rs-btn {
+    margin: 20px auto 0px;
+    max-width: 300px;
+  }
+}
+
+.rs-form .request__hint {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-font-feature-settings: "pnum" on, "lnum" on;
+          font-feature-settings: "pnum" on, "lnum" on;
+  color: #808185;
+  width: 100%;
+  max-width: 68.56%;
+}
+
+@media (max-width: 992px) {
+  .rs-form .request__hint {
+    max-width: 100%;
+  }
+}
+
+.rs-form .request__hint a {
+  text-decoration: underline;
+}
+
+@media (any-hover: hover) {
+  .rs-form .request__hint a:hover {
+    text-decoration: none;
+  }
+}

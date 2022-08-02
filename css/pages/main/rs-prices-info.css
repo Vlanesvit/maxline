@@ -1,0 +1,120 @@
+.rs-prices-info {
+  background-color: #f4f4f4;
+  padding: 80px 0px;
+  position: relative;
+}
+
+@media (max-width: 1140px) {
+  .rs-prices-info {
+    padding: calc(50px + (80 - 50) * ((100vw - 320px) / (1140 - 320))) 0px;
+  }
+}
+
+.rs-prices-info__wrapper {
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: repeat(1, 1fr);
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 35px;
+}
+
+@media (min-width: 993px) {
+  .rs-prices-info__wrapper {
+        grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+@media (min-width: 993px) {
+  .rs-prices-info__title {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-column: 1/6;
+  }
+}
+
+.rs-prices-info__title::before {
+  content: url(../../../img/icons/square-icon--big.svg);
+  margin-bottom: 22px;
+  display: inline-block;
+}
+
+@media (min-width: 993px) {
+  .rs-prices-info__title h2 {
+    max-width: 365px;
+  }
+}
+
+@media (min-width: 993px) {
+  .rs-prices-info__list {
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 7;
+    grid-column: 6/13;
+    padding-left: 30px;
+  }
+}
+
+.rs-prices-info .price-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 24px 0px;
+  position: relative;
+}
+
+@media (max-width: 540px) {
+  .rs-prices-info .price-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.rs-prices-info .price-item:first-child {
+  padding: 0px 0px 24px;
+}
+
+.rs-prices-info .price-item:last-child {
+  padding: 24px 0px 0px;
+}
+
+@media (min-width: 993px) {
+  .rs-prices-info .price-item:not(:last-child):after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    height: 1px;
+    width: calc(100% - 30px);
+    background: #e1e1e3;
+  }
+}
+
+.rs-prices-info .price-item__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 540px) {
+  .rs-prices-info .price-item__title {
+    margin-bottom: 20px;
+  }
+}
+
+.rs-prices-info .price-item__title img {
+  margin-right: 15px;
+}

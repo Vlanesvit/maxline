@@ -1,0 +1,170 @@
+.rs-about {
+  margin: 0px 0px 113px;
+  position: relative;
+}
+
+@media (max-width: 1140px) {
+  .rs-about {
+    margin: calc(50px + (80 - 50) * ((100vw - 320px) / (1140 - 320))) 0px calc(50px + (90 - 50) * ((100vw - 320px) / (1140 - 320)));
+  }
+}
+
+@media (max-width: 1140px) {
+  .rs-about {
+    margin-bottom: calc(50px + (113 - 50) * ((100vw - 320px) / (1140 - 320)));
+  }
+}
+
+.rs-about::before {
+  content: "";
+  position: absolute;
+  height: 232px;
+  width: 100%;
+  display: block;
+  background: #2b2d33;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 992px) {
+  .rs-about::before {
+    display: none;
+  }
+}
+
+.rs-about::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 55vw;
+  display: block;
+  background: #f4f4f4;
+  top: 0;
+  right: 0;
+}
+
+@media (max-width: 992px) {
+  .rs-about::after {
+    width: 100vw;
+  }
+}
+
+.rs-about__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 992px) {
+  .rs-about__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.rs-about__picture {
+  width: 100%;
+  padding-left: 40px;
+  position: relative;
+}
+
+@media (max-width: 1140px) {
+  .rs-about__picture {
+    padding-left: calc(0px + (40 - 0) * ((100vw - 992px) / (1140 - 992)));
+  }
+}
+
+@media (max-width: 992px) {
+  .rs-about__picture {
+    padding-left: 0px;
+  }
+}
+
+.rs-about__picture img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+.rs-about__note {
+  left: 0px;
+  width: 100%;
+  padding: 32px 32px 32px 32px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08), inset 0px 4px 0px #f4cf39;
+          box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08), inset 0px 4px 0px #f4cf39;
+}
+
+@media (max-width: 1140px) {
+  .rs-about__note {
+    padding: calc(20px + (32 - 20) * ((100vw - 320px) / (1140 - 320))) calc(15px + (32 - 15) * ((100vw - 320px) / (1140 - 320)));
+  }
+}
+
+@media (min-width: 541px) {
+  .rs-about__note {
+    position: absolute;
+    bottom: -33px;
+    max-width: 475px;
+  }
+}
+
+.rs-about__note::after {
+  content: url(../../../img/icons/triangle-icon.svg);
+  top: 0;
+  right: -45px;
+  position: absolute;
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+      -ms-transform: matrix(-1, 0, 0, 1, 0, 0);
+          transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+@media (max-width: 540px) {
+  .rs-about__note::after {
+    display: none;
+  }
+}
+
+.rs-about__note h5 {
+  margin-bottom: 8px;
+}
+
+.rs-about__description {
+  background: #f4f4f4;
+  padding: 60px;
+  max-width: 570px;
+}
+
+@media (max-width: 1140px) {
+  .rs-about__description {
+    padding: calc(20px + (60 - 20) * ((100vw - 320px) / (1140 - 320))) calc(0px + (60 - 0) * ((100vw - 320px) / (1140 - 320)));
+  }
+}
+
+@media (max-width: 992px) {
+  .rs-about__description {
+    max-width: 100%;
+  }
+}
+
+.rs-about__description h3 {
+  color: #bebebe;
+  margin-bottom: 8px;
+}
+
+.rs-about__description h2 {
+  margin-bottom: 30px;
+}
+
+.rs-about__description p:not(:last-child) {
+  margin-bottom: 20px;
+}

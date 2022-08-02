@@ -1,0 +1,187 @@
+.rs-text-block-2 {
+  position: relative;
+  padding: 80px 0px;
+  background: #2b2d33;
+}
+
+@media (max-width: 1140px) {
+  .rs-text-block-2 {
+    padding: calc(50px + (80 - 50) * ((100vw - 320px) / (1140 - 320))) 0px;
+  }
+}
+
+.rs-text-block-2 .rs-text-block__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 125px;
+  position: relative;
+}
+
+@media (max-width: 992px) {
+  .rs-text-block-2 .rs-text-block__wrapper {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 992px) {
+  .rs-text-block-2 .rs-text-block__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.rs-text-block-2 .rs-text-block__picture {
+  max-width: 498px;
+  width: 100%;
+  padding: 0px 0px 40px 40px;
+  position: relative;
+}
+
+@media (max-width: 992px) {
+  .rs-text-block-2 .rs-text-block__picture {
+    padding: 0px;
+    max-width: 100%;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-top: 20px;
+  }
+}
+
+.rs-text-block-2 .rs-text-block__picture::after {
+  content: url(../../../img/icons/square_line-icon--white.svg);
+  bottom: -2px;
+  left: 0;
+  position: absolute;
+}
+
+@media (max-width: 992px) {
+  .rs-text-block-2 .rs-text-block__picture::after {
+    bottom: calc((-35px) + ((-2) - (-35)) * ((100vw - 320px) / (992 - 320)));
+    left: calc((-10px) + ((0) - (-10)) * ((100vw - 320px) / (992 - 320)));
+  }
+}
+
+.rs-text-block-2 .rs-text-block__picture img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+.rs-text-block-2 .rs-text-block__description {
+  max-width: 552px;
+  margin-left: 30px;
+  width: 100%;
+  position: relative;
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .rs-text-block-2 .rs-text-block__description {
+    margin-left: 0px;
+    max-width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+.rs-text-block-2 .rs-text-block__description h2 {
+  margin-bottom: 22px;
+}
+
+.rs-text-block-2 .rs-text-block__description p {
+  color: #f4f4f4;
+}
+
+.rs-text-block-2 .rs-text-block__description p:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.rs-text-block-2 .rs-text-block__note {
+  width: 100%;
+  padding: 32px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08), inset 0px 4px 0px #f4cf39;
+          box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08), inset 0px 4px 0px #f4cf39;
+}
+
+@media (max-width: 1140px) {
+  .rs-text-block-2 .rs-text-block__note {
+    padding: calc(20px + (32 - 20) * ((100vw - 320px) / (1140 - 320))) calc(15px + (32 - 15) * ((100vw - 320px) / (1140 - 320)));
+  }
+}
+
+@media (min-width: 993px) {
+  .rs-text-block-2 .rs-text-block__note {
+    position: absolute;
+    max-width: 705px;
+    right: 0px;
+    bottom: 0px;
+  }
+}
+
+@media (max-width: 992px) {
+  .rs-text-block-2 .rs-text-block__note {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 20px;
+  }
+}
+
+.rs-text-block-2 .rs-text-block__note::after {
+  content: url(../../../img/icons/triangle-icon.svg);
+  top: 0;
+  left: -45px;
+  position: absolute;
+}
+
+@media (max-width: 992px) {
+  .rs-text-block-2 .rs-text-block__note::after {
+    display: none;
+  }
+}
+
+.rs-text-block-2 .rs-text-block__note ul {
+  margin-top: 20px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .rs-text-block-2 .rs-text-block__note ul {
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.rs-text-block-2 .rs-text-block__note ul li {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-font-feature-settings: "pnum" on, "lnum" on;
+          font-feature-settings: "pnum" on, "lnum" on;
+  color: #808185;
+  margin-bottom: 8px;
+}
+
+.rs-text-block-2 .rs-text-block__note .rs-btn {
+  margin-top: 20px;
+}
